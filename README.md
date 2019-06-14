@@ -31,8 +31,8 @@ Contributions are welcome. It is recommended that you open an issue and discuss 
 
 <h3>Contact Information</h3>
 Esther Kirui<br>
-Mobile:+254729977790<br>
-Email:estherkc100@gmail.com<br>
+<b>Mobile:</b>+254729977790<br>
+<b>Email:</b>estherkc100@gmail.com<br>
 
 <h3>License and Copyright Information.</h3>
 https://github.com/Eccie-K/Password-Locker/community/license/new?branch=master&template=mit<br>
