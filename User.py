@@ -11,8 +11,15 @@ class User:
     #Class Variables
     #global users_list
 
-    users_list = []
+    users_list = [] #empty User list
     def _init_(self,first_name,last_name,password):
         '''
         Method to define the property that each user object will hold.
         '''
+
+        #creating instance variables
+        self.first_name    =    first_name
+        self.last_name    =    last_name
+        self.password    =    password
+
+        
