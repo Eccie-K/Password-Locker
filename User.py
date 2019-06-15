@@ -22,4 +22,14 @@ class User:
         self.last_name    =    last_name
         self.password    =    password
 
-        
+        def save_user(self):
+            '''
+            Function to save a newly created user instance
+            '''
+            User.users_list.append(self)
+
+class Credential:
+    '''
+    Class to create account credentials, generate passwords and save user information
+    '''
+    
