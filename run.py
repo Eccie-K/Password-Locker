@@ -3,30 +3,24 @@ from user import User
 from credential import Credential
 
 
-def create_user(account, password):
+def create_user(username, password,email):
     """
     Function to create a new user
     """
-    new_user = Credential(account, password)
+    new_user = User(username, password,email)
     return new_user
 
-
-def save_user(username, password, email):
-    """
-    saving the user
-    """
-    User.save_user
 
 
 def display_user():
     return User.display_user()
 
 
-def save_credential(self):
+def save_user(self):
     '''
-    save_credential method saves credential objects into credential_list
+    save_user method saves credential obUser user_list
     '''
-    Credential.credential_list.append(self)
+    User.user_list.append(self)
 
 
 def confirm_user(username, password, email):
@@ -42,16 +36,15 @@ def confirm_user(username, password, email):
 
 def main():
     print('Welcome to password-locker')
+    print("-"*20)
     while True:
-        print("-"*10)
+        
         print("Use these short codes : cc - create a new user, du - display users, fu -find a user, ex -exit the user list ")
         short_code = input('choose any of the above:').lower().strip()
-        if short_code == 'ex':
-            exit
+        
 
-        elif short_code == 'cc':
+        if short_code == 'cc':
             print("-"*10)
-            print(' ')
             print('create new account:')
 
             print("username")
@@ -63,18 +56,19 @@ def main():
             print("email")
             email = input()
 
-            save_user(username, password, email)
+            save_user(create_user(username, password, email))
             # creates and saves new user
             print('\n')
-            print(f"New User {username} {email} created")
+            print(f"New User {username}.... {email} created")
             print('\n')
 
         elif short_code == 'du':
             if display_user():
                 print("Here is a list of users")
+                print("-"*20)
 
                 for user in display_user():  # loops through the user object to get each user
-                    print(f"{user.username} {user.email}")
+                    print(f"{user.username}....... {user.email}")
                     print('\n')
 
                 else:
@@ -82,17 +76,23 @@ def main():
                     print("No users saved yet")
                     print('\n')
 
-        elif short_code == 'cu':
+        elif short_code == 'fu':
                 print("Enter user to confirm existance")
+                print("-"*20)
                 search_username = input()
+                print("-"*20)
                 if confirm_user(username, password, email):
-                    print(f"{search_username}")
+                    print(f"Username...{search_username}")
+                    
+                    
                 else:
                     print("Sorry,user does not exist")
 
         elif short_code == "ex":
             print("Thanks and nice time!")
+            break
 
 
 if __name__ == '__main__':
-    main()
+    
+         main()
